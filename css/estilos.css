@@ -1,0 +1,57 @@
+*{
+	padding: 10px;
+}
+.cards{
+	display:flex;
+	justify-content: space-around;
+}
+.card{
+	width: 30%;
+}
+.card button{
+	justify-content: center;
+}
+.galeria{
+	display: flex;
+	justify-content: space-around;
+}
+.galeria div{
+
+	max-width: 30% ;
+
+}
+@keyframes fadp{
+	0% {transform: scale(1.5,1.5) rotate(180deg); }
+	50% {transform: scale(2,2) rotate(360deg); }
+	100% {transform: scale(1,1) rotate(0deg); }
+}
+@media screen and (max-width: 600px){
+	body{
+		color: white;
+		background: black;
+
+	}
+	.galeria{
+		flex-direction: column;
+	}
+	.galeria div{
+		max-width: 100%;
+		animation: fadp 1 alternate 3s;
+	}
+
+		
+	.cards{
+		flex-direction: column;
+	}
+
+	.card {
+		width: 100%;
+		color: black;
+	}
+}
+@media print{
+	.fotoHeader, .lead, .bloquote, .card, .btn, .table{
+		display: none;
+	}
+}
+
